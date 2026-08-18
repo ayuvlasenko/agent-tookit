@@ -22,6 +22,39 @@ Check installed packages with `pi list`. Update this package with:
 pi update git:github.com/ayuvlasenko/agent-tookit
 ```
 
+## Install an individual skill with Vercel Skills
+
+List skills in this repository:
+
+```bash
+npx skills@latest add ayuvlasenko/agent-tookit --list --full-depth
+```
+
+Install `brainstorm` into the current Pi project:
+
+```bash
+npx skills@latest add ayuvlasenko/agent-tookit \
+  --skill brainstorm \
+  --agent pi \
+  --full-depth
+```
+
+Install it globally:
+
+```bash
+npx skills@latest add ayuvlasenko/agent-tookit \
+  --skill brainstorm \
+  --agent pi \
+  --full-depth \
+  --global
+```
+
+Update only this skill:
+
+```bash
+npx skills@latest update brainstorm
+```
+
 ## Skills
 
 ### brainstorm

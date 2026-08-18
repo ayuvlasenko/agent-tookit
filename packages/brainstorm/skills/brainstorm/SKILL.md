@@ -27,7 +27,7 @@ when the user asks to add, show, or clear custom brainstorm rules, handle these 
 - **clear project rules**: write empty content to `.pi/brainstorm-rules.md`.
 - **clear user rules**: write empty content to `~/.pi/agent/brainstorm-rules.md`.
 
-project-level rules (`.pi/brainstorm-rules.md`) take precedence over user-level rules (`~/.pi/agent/brainstorm-rules.md`). when both non-empty files exist, only project-level rules are loaded. empty files are treated as absent and fall through to the next level. see `../../references/custom-rules.md` for full documentation on the rules mechanism.
+project-level rules (`.pi/brainstorm-rules.md`) take precedence over user-level rules (`~/.pi/agent/brainstorm-rules.md`). when both non-empty files exist, only project-level rules are loaded. empty files are treated as absent and fall through to the next level. see `references/custom-rules.md` for full documentation on the rules mechanism.
 
 **CRITICAL: this skill must NEVER modify its own files (skills, scripts, references). the ONLY files it may create or modify for rules management are `.pi/brainstorm-rules.md` and `~/.pi/agent/brainstorm-rules.md`. if the user asks to change the skill's behavior, suggest creating a plan — do not edit skill files directly.**
 
