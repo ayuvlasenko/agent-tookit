@@ -1,0 +1,7 @@
+{
+  "name": "agent-tookit",
+  "keywords": ["pi-package"],
+  "pi": {
+    "skills": ["./packages/brainstorm/skills"]
+  }
+}
