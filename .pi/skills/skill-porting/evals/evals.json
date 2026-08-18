@@ -1,0 +1,56 @@
+{
+  "skill_name": "skill-porting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Port the existing sample skill from the provided source directory to Pi. Preserve the source wording, structure, examples, and behavior. Create the target files, compare them with the source, and report the source scope, copied files, changed hunks, and verification results.",
+      "expected_output": "A Pi skill copied from the source with no unnecessary rewriting and a report that distinguishes unchanged files from any required adaptations.",
+      "files": [
+        "evals/fixtures/basic-source/SKILL.md",
+        "evals/fixtures/basic-source/references/usage.md"
+      ],
+      "expectations": [
+        "The target contains exactly the source-derived files in the source file map.",
+        "Every source-derived target file is byte-for-byte identical to its source counterpart, preserving wording, sentence style, formatting, examples, and structure.",
+        "The report distinguishes copied-unchanged files from adapted and target-only files.",
+        "The report records direct source comparisons and stale-reference verification."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Port the provided Claude-style skill to Pi. Adapt only constructs that are incompatible with Pi, such as Claude frontmatter tool declarations, Claude tool names, Claude paths, and Claude-only invocation syntax. The source intentionally contains unusual heading spacing, repeated spaces, capitalization, punctuation, sentence rhythm, sentence length, directness, and an awkward example. Preserve all of that source style exactly. Produce a compatibility ledger that explains every changed diff hunk and run stale-reference and source comparisons.",
+      "expected_output": "A Pi-compatible skill with only concrete harness adaptations, unchanged source-derived content elsewhere, and a per-hunk compatibility ledger.",
+      "files": [
+        "evals/fixtures/pi-adaptation-source/SKILL.md",
+        "evals/fixtures/pi-adaptation-source/references/custom-rules.md"
+      ],
+      "expectations": [
+        "The target contains exactly SKILL.md and references/custom-rules.md.",
+        "The target removes the Claude-only allowed-tools frontmatter without changing unrelated frontmatter.",
+        "The target replaces the specified Claude tools, paths, and invocation syntax with Pi-compatible forms.",
+        "Non-target source content, including unusual spacing, capitalization, punctuation, headings, examples, sentence rhythm, sentence length, directness, and authorial voice, remains unchanged after the declared compatibility substitutions.",
+        "The first source-derived target file operation is an exact copy before any content adaptation.",
+        "The report explains every changed hunk with a concrete Pi incompatibility and records verification results."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Port only the make workflow from this source plugin to Pi. Do not port the separate exec skill, Claude hooks, or plugin metadata. Record each excluded source component and why it is outside the declared scope. The resulting make skill must not silently retain references to unavailable /planning:exec behavior; resolve or explicitly report any such incompatibility. Verify the final file mapping and explain every changed hunk.",
+      "expected_output": "A narrowly scoped Pi port with documented exclusions, no silently stale unavailable workflow references, and a complete source-to-target verification report.",
+      "files": [
+        "evals/fixtures/scoped-plugin-source/commands/make.md",
+        "evals/fixtures/scoped-plugin-source/skills/exec/SKILL.md",
+        "evals/fixtures/scoped-plugin-source/hooks/hooks.json",
+        "evals/fixtures/scoped-plugin-source/.claude-plugin/plugin.json"
+      ],
+      "expectations": [
+        "The target contains the make workflow and does not copy the exec skill, hooks, or Claude plugin metadata.",
+        "The report lists every excluded source component and explains its scope or compatibility reason.",
+        "The target does not silently retain the unavailable /planning:exec reference.",
+        "The report provides a complete source-to-target mapping and a reason for every changed hunk.",
+        "The source directory remains unchanged and the final target file mapping is verified.",
+        "The non-compatibility planning instructions and formatting remain unchanged apart from the declared Pi metadata and unavailable-exec adaptation."
+      ]
+    }
+  ]
+}
