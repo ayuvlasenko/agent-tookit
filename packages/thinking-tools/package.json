@@ -1,7 +1,7 @@
 {
   "name": "agent-toolkit-thinking-tools",
   "version": "1.2.2",
-  "description": "Analytical thinking tools - dialectic analysis",
+  "description": "Analytical thinking tools - dialectic and root cause analysis",
   "keywords": ["pi-package"],
   "license": "MIT",
   "files": [

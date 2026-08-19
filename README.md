@@ -79,3 +79,13 @@ Prove and counter-prove a statement using parallel agents to eliminate confirmat
 - Skill: [`SKILL.md`](packages/thinking-tools/skills/dialectic/SKILL.md)
 - Source: [`umputun/cc-thingz/plugins/thinking-tools/skills/dialectic`](https://github.com/umputun/cc-thingz/tree/master/plugins/thinking-tools/skills/dialectic)
 - Invoke: `/skill:dialectic <statement>`
+
+### root-cause-investigator
+
+Systematic root cause analysis for errors, bugs, and unexpected behaviors using 5-Why methodology.
+
+- Package: [`packages/thinking-tools`](packages/thinking-tools)
+- Skill: [`SKILL.md`](packages/thinking-tools/skills/root-cause-investigator/SKILL.md)
+- References: [`references`](packages/thinking-tools/skills/root-cause-investigator/references)
+- Source: [`umputun/cc-thingz/plugins/thinking-tools/skills/root-cause-investigator`](https://github.com/umputun/cc-thingz/tree/master/plugins/thinking-tools/skills/root-cause-investigator)
+- Invoke: activates automatically for errors, bugs, build/test failures, performance issues, integration problems, or other unexpected behavior
