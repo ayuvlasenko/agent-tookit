@@ -70,3 +70,12 @@ Create a structured implementation plan in `docs/plans/`.
 - Skill: [`SKILL.md`](packages/planning/skills/planning-make/SKILL.md)
 - Source: [`umputun/cc-thingz/plugins/planning/commands/make.md`](https://github.com/umputun/cc-thingz/blob/master/plugins/planning/commands/make.md)
 - Invoke: `/skill:planning-make <description>`, or activates automatically when asking for an implementation plan
+
+### dialectic
+
+Prove and counter-prove a statement using parallel agents to eliminate confirmation bias.
+
+- Package: [`packages/thinking-tools`](packages/thinking-tools)
+- Skill: [`SKILL.md`](packages/thinking-tools/skills/dialectic/SKILL.md)
+- Source: [`umputun/cc-thingz/plugins/thinking-tools/skills/dialectic`](https://github.com/umputun/cc-thingz/tree/master/plugins/thinking-tools/skills/dialectic)
+- Invoke: `/skill:dialectic <statement>`
