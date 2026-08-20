@@ -1,6 +1,7 @@
 ---
 name: brainstorm
-description: Use before any creative work or significant change, including architecture, feature design, refactoring strategy, or requests to brainstorm, analyze, think through, discuss, design, or explore options. Follow the complete gated workflow even when the user provides a detailed proposal or asks for immediate opinions. Do not skip directly to solutions or implementation.
+description: Turn an idea into a validated design through a gated workflow before planning or implementation.
+disable-model-invocation: true
 ---
 
 # Brainstorm

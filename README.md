@@ -69,7 +69,7 @@ Collaborative dialogue that turns ideas into designs — use before creative wor
 
 - Skill: [`SKILL.md`](skills/brainstorm/SKILL.md)
 - Source: [`umputun/cc-thingz/plugins/brainstorm`](https://github.com/umputun/cc-thingz/tree/master/plugins/brainstorm)
-- Invoke: `/skill:brainstorm`, or activates automatically on design/brainstorm requests
+- Invoke: `/skill:brainstorm` (manual invocation only)
 
 ### planning-make
 
