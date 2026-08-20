@@ -1,7 +1,0 @@
-{
-  "name": "agent-toolkit",
-  "keywords": ["pi-package"],
-  "pi": {
-    "skills": ["./packages/*/skills"]
-  }
-}

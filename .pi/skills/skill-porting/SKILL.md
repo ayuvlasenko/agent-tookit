@@ -1,6 +1,8 @@
 ---
 name: skill-porting
 description: Port an existing skill, plugin, command, or related workflow from another repository or harness to Pi with minimal compatibility changes. Use this skill whenever the user explicitly asks to port, migrate, adapt, or convert an existing skill to Pi, including requests involving Claude Code, Codex, Agent Skills, plugin commands, or a source repository and target Pi layout.
+metadata:
+  internal: true
 ---
 
 # Skill Porting

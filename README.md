@@ -27,23 +27,33 @@ pi update git:github.com/ayuvlasenko/agent-toolkit
 
 ### Individual skills (Vercel Skills)
 
-List the skills in this repository:
+List available skills from this GitHub repository:
 
 ```bash
-npx skills@latest add ayuvlasenko/agent-toolkit --list --full-depth
+npx skills@latest add ayuvlasenko/agent-toolkit --list
 ```
 
-Install a skill into the current project:
+Install one skill into the current project:
 
 ```bash
 npx skills@latest add ayuvlasenko/agent-toolkit \
   --skill <skill> \
   --agent pi \
-  --full-depth \
   --copy
 ```
 
 Add `--global` to install globally.
+
+Install all public skills globally for Pi:
+
+```bash
+npx skills@latest add ayuvlasenko/agent-toolkit \
+  --skill '*' \
+  --agent pi \
+  --global \
+  --copy \
+  --yes
+```
 
 Update an installed skill:
 
@@ -57,8 +67,7 @@ npx skills@latest update <skill>
 
 Collaborative dialogue that turns ideas into designs — use before creative work or significant changes.
 
-- Package: [`packages/brainstorm`](packages/brainstorm)
-- Skill: [`SKILL.md`](packages/brainstorm/skills/brainstorm/SKILL.md)
+- Skill: [`SKILL.md`](skills/brainstorm/SKILL.md)
 - Source: [`umputun/cc-thingz/plugins/brainstorm`](https://github.com/umputun/cc-thingz/tree/master/plugins/brainstorm)
 - Invoke: `/skill:brainstorm`, or activates automatically on design/brainstorm requests
 
@@ -66,8 +75,7 @@ Collaborative dialogue that turns ideas into designs — use before creative wor
 
 Create a structured implementation plan in `docs/plans/`.
 
-- Package: [`packages/planning`](packages/planning)
-- Skill: [`SKILL.md`](packages/planning/skills/planning-make/SKILL.md)
+- Skill: [`SKILL.md`](skills/planning-make/SKILL.md)
 - Source: [`umputun/cc-thingz/plugins/planning/commands/make.md`](https://github.com/umputun/cc-thingz/blob/master/plugins/planning/commands/make.md)
 - Invoke: `/skill:planning-make <description>`, or activates automatically when asking for an implementation plan
 
@@ -75,8 +83,7 @@ Create a structured implementation plan in `docs/plans/`.
 
 Prove and counter-prove a statement using parallel agents to eliminate confirmation bias.
 
-- Package: [`packages/thinking-tools`](packages/thinking-tools)
-- Skill: [`SKILL.md`](packages/thinking-tools/skills/dialectic/SKILL.md)
+- Skill: [`SKILL.md`](skills/dialectic/SKILL.md)
 - Source: [`umputun/cc-thingz/plugins/thinking-tools/skills/dialectic`](https://github.com/umputun/cc-thingz/tree/master/plugins/thinking-tools/skills/dialectic)
 - Invoke: `/skill:dialectic <statement>`
 
@@ -84,8 +91,7 @@ Prove and counter-prove a statement using parallel agents to eliminate confirmat
 
 Systematic root cause analysis for errors, bugs, and unexpected behaviors using 5-Why methodology.
 
-- Package: [`packages/thinking-tools`](packages/thinking-tools)
-- Skill: [`SKILL.md`](packages/thinking-tools/skills/root-cause-investigator/SKILL.md)
-- References: [`references`](packages/thinking-tools/skills/root-cause-investigator/references)
+- Skill: [`SKILL.md`](skills/root-cause-investigator/SKILL.md)
+- References: [`references`](skills/root-cause-investigator/references)
 - Source: [`umputun/cc-thingz/plugins/thinking-tools/skills/root-cause-investigator`](https://github.com/umputun/cc-thingz/tree/master/plugins/thinking-tools/skills/root-cause-investigator)
 - Invoke: activates automatically for errors, bugs, build/test failures, performance issues, integration problems, or other unexpected behavior
